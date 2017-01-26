@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Web Messenger</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <ul class="messages" id="messages"></ul>
+    <div class="sendMessage">
+      <input id="message"/>
+    </div>
+
+    <script src="lib/socket.io/socket.io-1.2.0.js"></script>
+    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script src="lib/jqueryui/jquery-ui.min.js"></script>
+		<!--(if target dev)><!-->
+		<script src="third-party/closure-library/closure/goog/base.js"></script>
+		<script src="js/deps.js" ></script>
+		<script>
+			goog.require('WebMessenger.App');
+		</script>
+		<!--<!(endif)-->
+		<!--(if target dist)>
+		<script src="dist/WebMessenger.App.sim.js" ></script>
+		<!(endif)-->
+    <script>
+      $(document).ready(function() {
+        window['app'] = new WebMessenger.App();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "web-messenger",
+  "version": "1.0.0",
+  "description": "web messenger for assignment",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "closure-compiler": "^0.2.12",
+    "closure-library": "^1.43629075.2",
+    "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "grunt-closure-tools": "^0.9.9",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-targethtml": "^0.2.6",
+    "load-grunt-tasks": "^3.5.2",
+    "nodemon": "^1.11.0",
+    "socket.io": "^1.7.2",
+    "sqlite": "^2.2.4"
+  },
+  "standard": {
+    "globals": [
+      "goog",
+      "WebMessenger",
+      "io",
+      "$"
+    ]
+  }
+}

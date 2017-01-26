@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Web Messenger</title>
+    <link rel="stylesheet" href="lib/jqueryui/jquery-ui.min.css"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/messenger.css" />
+  </head>
+  <body>
+    <div class="panel-body">
+      <ul id="messages" class="chat">
+      </ul>
+    </div>
+    <div class="sendMessage">
+      <input id="message"/>
+    </div>
+    <div id="dialog"></div>
+
+    <script src="lib/socket.io/socket.io-1.2.0.js"></script>
+    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script src="lib/jqueryui/jquery-ui.min.js"></script>
+		
+		
+		<script src="compiled/WebMessenger.sim.js" ></script>
+		
+    <script>
+      $(document).ready(function() {
+        window['app'] = new WebMessenger.App();
+      });
+    </script>
+  </body>
+</html>
